@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS Product (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(80),
+    description VARCHAR(255),
+    quantity INTEGER,
+    cod VARCHAR(255) UNIQUE,
+    price DECIMAL(10,2)
+);

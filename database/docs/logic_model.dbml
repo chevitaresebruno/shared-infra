@@ -1,0 +1,8 @@
+table Product {
+    id Bigint
+    name VarChar(80)
+    description VarChar(255)
+    quantity Integer
+    cod VarChar(255) unique
+    price Decimal(10,2)
+}

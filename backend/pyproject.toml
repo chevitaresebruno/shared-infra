@@ -1,0 +1,16 @@
+[project]
+name = "storage"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.162.7",
+    "psycopg[binary]>=3.3.9",
+    "pydantic>=2.14.3",
+    "sqlalchemy[asyncio,psycopg]>=2.1.8",
+    "uvicorn>=0.54.0",
+]
+
+[tool.fastapi]
+entrypoint = "main:app"

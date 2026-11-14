@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "infra-compartilhada",
+			"path": "."
+		},
+		{
+			"name": "backend",
+			"path": "backend"
+		}
+	],
+	"settings": {}
+}

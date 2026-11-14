@@ -1,0 +1,16 @@
+from collections.abc import Iterable
+from typing import Protocol
+
+from models.entity import Entity
+
+
+class IManageUseCase[T: Entity](Protocol):
+    def list(self) -> Iterable[T]: ...
+
+    def get_by_id(self, id: int) -> T: ...
+
+    def create(self, obj: T) -> None: ...
+
+    def update(self, obj: T) -> None: ...
+
+    def delete(self, obj: T) -> None: ...

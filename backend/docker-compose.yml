@@ -1,0 +1,23 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+
+    container_name: ${APP_TITLE-MyAPI}
+
+    env_file:
+      - .env
+
+    environment:
+      APP_HOST: 0.0.0.0
+
+    ports:
+      - "${APP_PORT:-8000}:${APP_PORT:-8000}"
+
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+    restart: unless-stopped
+    init: true
